@@ -20,15 +20,38 @@
     width: 100%;
     height: 100%;
     transform: scale(0);
+    background: rgba(0, 0, 0, 0.3);
     transition: .3s;
   }
   &__author{
-
+    width: 50%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-50%);
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+  &__authorImg {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #fff;
+    border-radius: 8px;
+  }
+  &__authorName {
+    font-size: 30px;
+    margin-top: 13px;
+  }
+  &__authorLink {
+    font-size: 18px;
   }
   &__buttons {
     position: absolute;
     width: 50%;
-    bottom: 30%;
+    bottom: 20%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
