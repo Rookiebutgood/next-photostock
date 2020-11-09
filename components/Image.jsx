@@ -1,7 +1,6 @@
 import styles from '../styles/Image.module.scss'
 
 export default function Image({img}) {
-  console.log(img)
   return (
     <div className={styles.image}>
       <img src={img.urls.regular} className={styles.image__bg} />
@@ -12,7 +11,7 @@ export default function Image({img}) {
           <span className={styles.image__authorLink}>{`@${img.user.username}`}</span>
         </div>
         <div className={styles.image__buttons}>
-          <button className={styles.image__button}>
+          <button className={styles.image__button} onClick={()=>console.log(img)}>
             <img src="./favorite.svg" alt=""/>
           </button>
           <button className={styles.image__button}>

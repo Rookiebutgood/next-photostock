@@ -37,15 +37,18 @@
     display: flex;
   }
   &__button{
-    &_search {
-
-    }
-    &_favorite {
-      
-    }
-    &_history {
-      
-    }
+    background: none;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+    cursor: pointer;
+  }
+  &__buttonIcon{
+    margin-right: 10px;
   }
   &__inputWrp {
     width: 100%;
@@ -76,5 +79,8 @@
     &::placeholder {
       color: #fff;
     }
+  }
+  &__searchHistory {
+    color: #fff;
   }
 }
