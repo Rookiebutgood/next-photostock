@@ -1,13 +1,16 @@
 .header {
   position: fixed;
+  top: 0;
   background: #000;
   width: 100%;
   padding: 25px 220px;
   max-height: 80px;
   box-sizing: border-box;
   overflow: hidden;
-  transition: .3s;
+  z-index: 10;
+  //transition: .3s;
   &_expand {
+    position: relative;
     height: 400px;
     max-height: 400px;
     padding: 90px 220px;
@@ -21,7 +24,14 @@
   justify-content: space-between;
   &__logo {
     width: 200px;
-    height :100%;
+    color: #fff;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    img {
+      margin-right: 18px;
+    }
   }
   &__buttons {
     display: flex;
