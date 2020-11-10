@@ -2,17 +2,17 @@ import {useEffect, useState} from 'react';
 import Link from 'next/link';
 import styles from '../styles/Header.module.scss';
 
-export default function Header() {
-  let [isHeaderExtend, setHeaderExtend] = useState(true);
+export default function Header({isOpen=true}) {
+  let [isHeaderExtend, setHeaderExtend] = useState(isOpen);
   let [showHistory, setShowHistory] = useState(false);
   let [searchHistory, setSearchHistory] = useState([]);
 
   useEffect(()=> {
     window.addEventListener('scroll', ()=>{
-      if(window.scrollY > 450) {
+      if(window.scrollY > 100) {
         setHeaderExtend(false)
       } else {
-        setHeaderExtend(true)
+        //setHeaderExtend(true)
       }
     })
   }, [])

@@ -1,8 +1,10 @@
 import Header from '../components/Header'
-
+import ImageList from '../components/ImageList'
 
 function HomePage() {
-  return <div style={{height: '2000px'}}></div>
+  return (<div>
+    <ImageList />
+  </div>)
 }
 
 export default HomePage

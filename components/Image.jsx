@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styles from '../styles/Image.module.scss'
 
 export default function Image({img}) {
@@ -14,9 +15,11 @@ export default function Image({img}) {
           <button className={styles.image__button} onClick={()=>console.log(img)}>
             <img src="./favorite.svg" alt=""/>
           </button>
-          <button className={styles.image__button}>
-            <img src="./resize.svg" alt=""/>
-          </button>
+          <Link href={`/photo_page/${img.id}`}>
+            <button className={styles.image__button}>
+              <img src="./resize.svg" alt=""/>
+            </button>
+          </Link>
           <button className={styles.image__button}>
             <img src="./download.svg" alt=""/>
           </button>

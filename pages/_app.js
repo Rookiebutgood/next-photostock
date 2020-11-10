@@ -3,7 +3,7 @@ import Header from '../components/Header'
 
 function MyApp({ Component, pageProps }) {
   return <div>
-    <Header />
+    <Header isOpen={false} />
       <Component {...pageProps} />
   </div>
 }
