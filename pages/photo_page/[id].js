@@ -31,7 +31,7 @@ function PhotoPage() {
   // }, [image])
   return (<div>
     { image && <PageImage img={image} /> }
-    { image && <ImageList imagesProp={sameImages} /> }
+    { image && <ImageList imagesProp={sameImages} title="Похожие фотографии" showSwitch={false} /> }
   </div>)
 }
 

@@ -13,15 +13,15 @@ export default function Image({img}) {
         </div>
         <div className={styles.image__buttons}>
           <button className={styles.image__button} onClick={()=>console.log(img)}>
-            <img src="./favorite.svg" alt=""/>
+            <img src="/favorite.svg" alt=""/>
           </button>
           <Link href={`/photo_page/${img.id}`}>
             <button className={styles.image__button}>
-              <img src="./resize.svg" alt=""/>
+              <img src="/resize.svg" alt=""/>
             </button>
           </Link>
           <button className={styles.image__button}>
-            <img src="./download.svg" alt=""/>
+            <img src="/download.svg" alt=""/>
           </button>
         </div>
       </div>

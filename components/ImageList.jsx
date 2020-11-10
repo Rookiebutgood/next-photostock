@@ -3,7 +3,7 @@ import styles from '../styles/ImageList.module.scss';
 import Image from './Image';
 const PUBLIC_KEY = process.env.PUBLIC_KEY;
 
-export default function ImageList({imagesProp}) {
+export default function ImageList({imagesProp, title, showSwitch=true}) {
   let [outputType, setOutputType] = useState(true)
   let [images, setImages] = useState([])
   useEffect(()=>{
@@ -20,7 +20,8 @@ export default function ImageList({imagesProp}) {
   }, [])
   return(
     <div className={styles.imageList}>
-      <div>outputtupes</div>
+      {title && <h3 className={styles.imageList__title}>{title}</h3>}
+      {showSwitch && <div>outputtupes</div>}
       <div className={styles.imageList__images}>
         {images}
       </div>
