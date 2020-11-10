@@ -3,7 +3,7 @@ import styles from '../styles/ImageList.module.scss';
 import Image from './Image';
 const PUBLIC_KEY = process.env.PUBLIC_KEY;
 
-export default function ImageList() {
+export default function ImageList({imagesProp}) {
   let [outputType, setOutputType] = useState(true)
   let [images, setImages] = useState([])
   useEffect(()=>{
@@ -14,13 +14,15 @@ export default function ImageList() {
       res.forEach((element, index) => {
         imageArr.push(<Image img={element} className={styles.imageList__image} key={index} />)
       });
-      return [...prev, imageArr]}))
+      return [...prev, imageArr]
+    })
+    )
   }, [])
   return(
     <div className={styles.imageList}>
       <div>outputtupes</div>
       <div className={styles.imageList__images}>
-      {images}
+        {images}
       </div>
     </div>
   )
